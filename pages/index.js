@@ -14,7 +14,6 @@ export default function HomePage() {
       {isAuthenticated ? (
         <>
           <button onClick={logout}>Logout</button>
-          <p>Welcome <strong>{user.get("username")}</strong></p>
           <p>Your wallet address is <strong>{user.get("ethAddress")}</strong></p>
         </>
       ) : (
