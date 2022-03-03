@@ -2,13 +2,12 @@ import { useMoralis } from "react-moralis";
 import styled from "styled-components";
 
 export default function HomePage() {
-  const { authenticate, isAuthenticated, logout, user, isAuthenticating } =
-    useMoralis();
+  const { authenticate, isAuthenticated, logout, user, isAuthenticating } = useMoralis();
 
   const onHandleSignIn = () => {
     authenticate({ provider: "metamask" });
   };
-  // https://admin.moralis.io/servers
+
   return (
     <Styled>
       {isAuthenticated ? (
